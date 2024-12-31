@@ -16,9 +16,9 @@ export const PeoplePage: React.FC = () => {
       try {
         setLoading(true);
         const peopleList = await getPeople();
-        const formatedPoepleList = utils.formPeopleData(peopleList);
+        const formattedPeopleList = utils.formPeopleData(peopleList);
 
-        setPeople(formatedPoepleList);
+        setPeople(formattedPeopleList);
       } catch {
         setError(ErrorTypes.LOAD_ERROR);
       }
@@ -27,7 +27,7 @@ export const PeoplePage: React.FC = () => {
     };
 
     getPeopleList();
-  }, [setLoading]);
+  }, []);
 
   return (
     <>

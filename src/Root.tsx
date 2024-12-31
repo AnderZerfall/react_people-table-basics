@@ -15,6 +15,7 @@ export const Root: React.FC = () => (
       <Route path="/" element={<App />}>
         <Route index element={<HomePage />} />
         <Route path="people" element={<PeoplePage />}>
+          <Route index element={<PeoplePage />} />
           <Route path=":slug?" element={<PeoplePage />} />
         </Route>
         <Route path="home" element={<Navigate to="/" replace />} />
